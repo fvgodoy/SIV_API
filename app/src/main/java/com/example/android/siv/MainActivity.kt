@@ -19,17 +19,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val pesquisaCEP: Button = findViewById(R.id.pesquisaCEP)
-        val cep: EditText = findViewById(R.id.cep)
+        val pesquisaRegistro: Button = findViewById(R.id.pesquisaRegistro)
+        val cdUser: EditText = findViewById(R.id.cdUser)
         val progress_bar: ProgressBar = findViewById(R.id.progress_bar)
 
 
         //-- Ao clicar no botão número busca-se o registro do usuario dentro da API
-        pesquisaCEP.setOnClickListener {
+        pesquisaRegistro.setOnClickListener {
 
             progress_bar.visibility = View.VISIBLE
 
-            val call = RetrofitFactory().retrofitService().getCodUser(cep.text.toString())
+            val call = RetrofitFactory().retrofitService().getCodUser(cdUser.text.toString())
 
             call.enqueue(object : Callback<List<ClasseVacina>> {
 
