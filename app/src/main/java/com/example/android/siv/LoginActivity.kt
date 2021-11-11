@@ -14,29 +14,8 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
     }
 
-    // "Go to Second Activity" button click
     fun buttonClickFunction(v: View?) {
-
-        // get the text to pass
-        val editText = findViewById<View>(R.id.til_usuario) as EditText
-        val textToPass = editText.text.toString()
-
-        // start the SecondActivity
-        val intent = Intent(this, MainActivity::class.java)
-        intent.putExtra(Intent.EXTRA_TEXT, textToPass)
+        val intent = Intent(applicationContext, MainActivity::class.java)
         startActivity(intent)
     }
 }
-
-
-//class LoginActivity : AppCompatActivity() {
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_login)
-//    }
-//
-//    fun buttonClickFunction(v: View?) {
-//        val intent = Intent(applicationContext, MainActivity::class.java)
-//        startActivity(intent)
-//    }
-//}

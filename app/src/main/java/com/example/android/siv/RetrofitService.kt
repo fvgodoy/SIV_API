@@ -8,7 +8,7 @@ interface RetrofitService {
 
     //https://sivwebapi.azurewebsites.net/api/aplicacao/usuario/{CodUser}/
     @GET("{CodUser}")
-    fun getCodUser(@Path("CodUser") CodUser : String) : Call<ClasseVacina>
+    fun getCodUser(@Path("CodUser") CodUser : String) : Call<List<ClasseVacina>>
 
     //https://viacep.com.br/ws/SP/Sao%20Paulo/Avenida%20Lins%20de%20Vasconcelos/json/
     //@GET("{estado}/{cidade}/{endereco}/json/")
