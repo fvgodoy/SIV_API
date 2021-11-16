@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Sistema Integrado de Vacinação</string>
     <string name="label_new_task">Adicionar Registro de Vacina</string>
+    <string name="label_edit_task">Editar Registro de Vacina</string>
     <string name="label_title">Nome da Vacina</string>
     <string name="label_local">Local de Aplicacao</string>
     <string name="label_aplicador">Nome do Aplicador</string>

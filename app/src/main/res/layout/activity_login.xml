@@ -47,7 +47,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text" />
+                android:inputType="text"
+                android:id="@+id/txtUsuario"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -65,7 +66,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text" />
+                android:inputType="textPassword"
+                android:id="@+id/txtSenha"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -81,8 +83,7 @@
             app:layout_constraintBottom_toTopOf="@id/btnCadastrar"
             app:layout_constraintEnd_toEndOf="@id/guide_end"
             app:layout_constraintStart_toStartOf="@id/guide_start"
-            app:backgroundTint="@color/blue"
-            android:onClick="buttonClickFunction"/>
+            app:backgroundTint="@color/blue" />
 
         <com.google.android.material.button.MaterialButton
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"

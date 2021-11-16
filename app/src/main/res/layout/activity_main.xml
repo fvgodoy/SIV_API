@@ -5,7 +5,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
 
 
     <com.google.android.material.appbar.MaterialToolbar
@@ -35,19 +35,21 @@
     <include
         android:id="@+id/include_empty"
         layout="@layout/empty_state"
-        app:layout_constraintTop_toBottomOf="@id/pesquisaRegistro"/>
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:visibility="invisible"
+        />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_tasks"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintBottom_toTopOf="@id/include_empty"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintTop_toBottomOf="@id/btnAdd"
         tools:itemCount="8"
         tools:listitem="@layout/item_task"
-        tools:visibility="gone"/>
+        android:padding="40dp"
+        android:visibility="invisible"
+        />
 
 <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
 <!--        android:id="@+id/fab"-->
@@ -61,7 +63,7 @@
 <!--        app:srcCompat="@drawable/ic_add"-->
 <!--        app:backgroundTint="@color/yellow"-->
 <!--        />-->
-
+<!--
         <EditText
             android:id="@+id/cdUser"
             android:layout_width="0dp"
@@ -86,9 +88,21 @@
             android:text="Pesquisar Registros"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cdUser" />
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+-->
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="30dp"
+            android:text="Adicionar Registros"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
-        <ProgressBar
+    <ProgressBar
             android:id="@+id/progress_bar"
             style="?android:attr/progressBarStyle"
             android:layout_width="100dp"
@@ -101,7 +115,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/pesquisaRegistro" />
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

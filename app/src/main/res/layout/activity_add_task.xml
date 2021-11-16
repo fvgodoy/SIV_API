@@ -31,7 +31,7 @@
         app:layout_constraintGuide_end="32dp" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_title"
+        android:id="@+id/txtTitle"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -44,25 +44,27 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text" />
+            android:inputType="text"
+            android:id="@+id/txtTitleValue"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_local"
+        android:id="@+id/txtLocal"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:hint="@string/label_local"
-        app:layout_constraintEnd_toEndOf="@id/til_title"
-        app:layout_constraintStart_toStartOf="@id/til_title"
-        app:layout_constraintTop_toBottomOf="@id/til_title">
+        app:layout_constraintEnd_toEndOf="@id/txtTitle"
+        app:layout_constraintStart_toStartOf="@id/txtTitle"
+        app:layout_constraintTop_toBottomOf="@id/txtTitle">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text" />
+            android:inputType="text"
+            android:id="@+id/txtLocalValue"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -73,19 +75,20 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:hint="@string/label_aplicador"
-        app:layout_constraintEnd_toEndOf="@id/til_local"
-        app:layout_constraintStart_toStartOf="@id/til_local"
-        app:layout_constraintTop_toBottomOf="@id/til_local">
+        app:layout_constraintEnd_toEndOf="@id/txtLocal"
+        app:layout_constraintStart_toStartOf="@id/txtLocal"
+        app:layout_constraintTop_toBottomOf="@id/txtLocal">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text" />
+            android:inputType="text"
+            android:id="@+id/txtAplicadorValue"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_crm"
+        android:id="@+id/txtCrm"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -98,47 +101,50 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text" />
+            android:inputType="text"
+            android:id="@+id/txtCrmValue"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_date"
+        android:id="@+id/txtDate"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:hint="@string/label_date"
-        app:layout_constraintEnd_toStartOf="@id/til_hour"
-        app:layout_constraintStart_toStartOf="@id/til_crm"
-        app:layout_constraintTop_toBottomOf="@id/til_crm"
+        app:layout_constraintEnd_toStartOf="@id/txtHour"
+        app:layout_constraintStart_toStartOf="@id/txtCrm"
+        app:layout_constraintTop_toBottomOf="@id/txtCrm"
         app:startIconDrawable="@drawable/ic_calendar">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="none"
             android:focusable="false"
-            android:inputType="none" />
+            android:id="@+id/txtDateValue"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_hour"
+        android:id="@+id/txtHour"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="@string/label_hour"
         app:layout_constraintEnd_toEndOf="@id/guide_end"
-        app:layout_constraintStart_toEndOf="@id/til_date"
-        app:layout_constraintTop_toTopOf="@id/til_date"
+        app:layout_constraintStart_toEndOf="@id/txtDate"
+        app:layout_constraintTop_toTopOf="@id/txtDate"
         app:startIconDrawable="@drawable/ic_timer">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="none"
             android:focusable="false"
-            android:inputType="none" />
+            android:id="@+id/txtHourValue"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
